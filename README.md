@@ -2,4 +2,4 @@
 
 RecyclerView simples com headers organizados alfabeticamente
 
-<img src="recyclerview.gif" width="49%">
+<img src="recyclerview.gif" width="30%">
