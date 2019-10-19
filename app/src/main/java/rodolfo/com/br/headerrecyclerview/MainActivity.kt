@@ -28,40 +28,21 @@ class MainActivity : AppCompatActivity() {
             "Paulo",
             "Paula"
         )
-        val letras = arrayListOf<String>(
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z"
-        )
+        val letras = gerarLetras()
 
 
         list.sort()
         val adapter = ContatoAdapter(gerarLista(letras, list))
         rvNomes.adapter = adapter
         rvNomes.layoutManager = LinearLayoutManager(this@MainActivity)
+    }
+
+    private fun gerarLetras(): ArrayList<String> {
+        var list = ArrayList<String>()
+        for (s in 'a'..'z'){
+            list.add(s.toString().toUpperCase())
+        }
+        return list
     }
 
     private fun gerarLista(
